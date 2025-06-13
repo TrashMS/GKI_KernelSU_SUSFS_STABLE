@@ -342,6 +342,7 @@ jobs:
       # Get the Latest Tag from GitHub
       - name: 生成和创建新标签
         env:
+          GH_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.MY_GITHUB_TOKEN  }}
         run: |
             # Fetch the latest tag from GitHub (this is the latest tag based on the GitHub API)
